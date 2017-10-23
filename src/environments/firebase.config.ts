@@ -7,3 +7,4 @@ export const firebaseConfig = {
     storageBucket: 'pepper-51555.appspot.com',
     messagingSenderId: '736165304321'
   };
+
