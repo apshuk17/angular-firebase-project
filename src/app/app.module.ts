@@ -9,10 +9,18 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from '../environments/firebase.config';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { LessonsService } from './shared/model/lessons.service';
+
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
+import { LessonsListComponent } from './lessons-list/lessons-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    LessonsListComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +30,7 @@ import { AppComponent } from './app.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule
 ],
-  providers: [],
+  providers: [LessonsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
