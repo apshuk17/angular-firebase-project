@@ -37,12 +37,25 @@ export class AppComponent implements OnInit {
   }
 
   objectUpdate() {
+    // This will update the property or add it in the object
+    this.lesson$.update({description: 'Lorem Ipsum'});
+
   }
 
-  objectSet() {}
+  objectSet() {
+    // this will destroy all other properties of the object except 'description'
+    this.lesson$.set({description: 'Lorem Ipsum'});
+  }
+
+  objectRemove() {
+    // this will remove this object
+    this.lesson$.remove();
+  }
 
   ngOnInit() {
     this.courses$ = this.af.list('courses');
+
+    this.lesson$ = this.af.object('lessons/-Kx5y0aRRmkMseFLIT5V');
 
     this.courses$.subscribe((courses) => {
       console.log(courses);
