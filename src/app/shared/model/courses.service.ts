@@ -15,4 +15,7 @@ export class CoursesService {
     return this.courses$ = this.afd.list('courses').map(Course.fromJsonList);
   }
 
+  findLessonsForCourse(courseUrl: string) {
+
+  }
 }
