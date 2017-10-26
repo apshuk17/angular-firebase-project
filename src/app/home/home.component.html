@@ -1,7 +1,8 @@
 <div class="col-sm-12">
   <div class="lessons-detail text-center">
     <h2>All Lessons</h2>
-    <p>Total Lessons: {{lessons?.length}}</p>
-    <app-lessons-list [lessons]="lessons"></app-lessons-list>  
+    <input type="text" placeholder="Search" (keyup)="search(input.value)" #input/>
+    <p>Total Lessons: {{filteredLessons?.length}}</p>
+    <app-lessons-list [lessons]="filteredLessons"></app-lessons-list>  
   </div>
 </div>

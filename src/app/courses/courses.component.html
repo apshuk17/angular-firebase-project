@@ -1,0 +1,8 @@
+<div class="courses-details text-center">
+  <ul>
+    <li class="course-detail" *ngFor="let course of ( courses$ | async )">
+      <span>{{course.description}}</span>
+      <span><button class="btn btn-primary" [routerLink]="course.url">View</button></span>
+    </li>
+  </ul>
+</div>
