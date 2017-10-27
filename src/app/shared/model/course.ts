@@ -16,4 +16,8 @@ export class Course {
         public courseListIcon: string,
         public longDescription: string
     ) {}
+
+    get checked() {
+        return this.$key;
+    }
 }

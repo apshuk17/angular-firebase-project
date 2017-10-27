@@ -58,8 +58,8 @@ export class AppComponent implements OnInit {
     this.lesson$ = this.af.object('lessons/-Kx5y0aRRmkMseFLIT5V');
 
     this.courses$.subscribe((courses) => {
-      console.log(courses);
-    })
+      //console.log(courses);
+    });
 
     this.courses$.map(courses => courses[0]).subscribe((res) => {
       this.firstCourse = res;

@@ -16,7 +16,11 @@ import { CoursesService } from './shared/model/courses.service';
 import { routerConfig } from './router.config';
 
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/do';
+import 'rxjs/add/observable/combineLatest';
+
 import { LessonsListComponent } from './lessons-list/lessons-list.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { CoursesComponent } from './courses/courses.component';
